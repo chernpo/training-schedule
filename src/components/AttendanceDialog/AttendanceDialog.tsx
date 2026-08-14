@@ -33,12 +33,14 @@ export function AttendanceDialog({ lesson, open, onClose, onSaved }: AttendanceD
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  useEffect(() => {
-    if (open && lesson) {
-      setSelected(lesson.attendanceStatus === 'Pending' ? '' : lesson.attendanceStatus)
-      setTouched(false)
-      setError(null)
-    }
+useEffect(() => {
+  if (open && lesson) {
+    /* eslint-disable react-hooks/set-state-in-effect -- intentional: resetting local form state when the dialog opens for a (possibly different) lesson */
+    setSelected(lesson.attendanceStatus === 'Pending' ? '' : lesson.attendanceStatus)
+    setTouched(false)
+    setError(null)
+    /* eslint-enable react-hooks/set-state-in-effect */
+  }
   }, [open, lesson])
 
   const showValidationError = touched && !selected

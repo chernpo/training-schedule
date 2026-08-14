@@ -30,6 +30,7 @@ export function useTrainingLessons(filters?: LessonFilters): UseTrainingLessonsR
   }, [filtersKey])
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional: this effect fetches data on mount/filter change, the standard data-fetching pattern
     fetchLessons()
   }, [fetchLessons])
 

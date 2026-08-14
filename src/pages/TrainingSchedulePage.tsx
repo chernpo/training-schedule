@@ -1,9 +1,13 @@
+import { useState } from 'react'
 import { Container, Typography } from '@mui/material'
 import { useTrainingLessons } from '../hooks/useTrainingLessons'
 import { TrainingScheduleTable } from '../components/TrainingScheduleTable/TrainingScheduleTable'
+import { ScheduleFilters } from '../components/Filters/ScheduleFilters'
+import type { LessonFilters } from '../api/types'
 
 export function TrainingSchedulePage() {
-  const { data, loading, error } = useTrainingLessons()
+  const [filters, setFilters] = useState<LessonFilters>({})
+  const { data, loading, error } = useTrainingLessons(filters)
 
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
@@ -11,7 +15,8 @@ export function TrainingSchedulePage() {
         Training Schedule
       </Typography>
 
-      {/* Phase 4 replaces these three lines with proper loading/empty/error components */}
+      <ScheduleFilters filters={filters} onChange={setFilters} />
+
       {loading && <Typography>Loading…</Typography>}
       {error && <Typography color="error">{error}</Typography>}
       {!loading && !error && <TrainingScheduleTable lessons={data} />}

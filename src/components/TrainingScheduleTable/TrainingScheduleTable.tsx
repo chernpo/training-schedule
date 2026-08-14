@@ -7,11 +7,18 @@ import {
   TableRow,
   Paper,
   Chip,
+  IconButton,
+  Tooltip,
+  Stack,
 } from '@mui/material'
+import VisibilityIcon from '@mui/icons-material/Visibility'
+import EventAvailableIcon from '@mui/icons-material/EventAvailable'
 import type { TrainingLesson, LessonStatus, AttendanceStatus } from '../../api/types'
 
 interface TrainingScheduleTableProps {
   lessons: TrainingLesson[]
+  onViewDetails: (lesson: TrainingLesson) => void
+  onManageAttendance: (lesson: TrainingLesson) => void
 }
 
 const lessonStatusColor: Record<LessonStatus, 'default' | 'primary' | 'success' | 'error'> = {
@@ -28,7 +35,7 @@ const attendanceStatusColor: Record<AttendanceStatus, 'default' | 'success' | 'e
   Late: 'warning',
 }
 
-export function TrainingScheduleTable({ lessons }: TrainingScheduleTableProps) {
+export function TrainingScheduleTable({ lessons, onViewDetails, onManageAttendance }: TrainingScheduleTableProps) {
   return (
     <TableContainer component={Paper}>
       <Table size="small">
@@ -41,6 +48,7 @@ export function TrainingScheduleTable({ lessons }: TrainingScheduleTableProps) {
             <TableCell>Vehicle / Bus</TableCell>
             <TableCell>Lesson Status</TableCell>
             <TableCell>Attendance</TableCell>
+            <TableCell align="right">Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -56,6 +64,20 @@ export function TrainingScheduleTable({ lessons }: TrainingScheduleTableProps) {
               </TableCell>
               <TableCell>
                 <Chip label={lesson.attendanceStatus} color={attendanceStatusColor[lesson.attendanceStatus]} size="small" />
+              </TableCell>
+              <TableCell align="right">
+                <Stack direction="row" spacing={0.5} justifyContent="flex-end">
+                  <Tooltip title="View lesson details">
+                    <IconButton size="small" onClick={() => onViewDetails(lesson)}>
+                      <VisibilityIcon fontSize="small" />
+                    </IconButton>
+                  </Tooltip>
+                  <Tooltip title="Manage attendance">
+                    <IconButton size="small" onClick={() => onManageAttendance(lesson)}>
+                      <EventAvailableIcon fontSize="small" />
+                    </IconButton>
+                  </Tooltip>
+                </Stack>
               </TableCell>
             </TableRow>
           ))}

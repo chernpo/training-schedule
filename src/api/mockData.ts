@@ -1,0 +1,28 @@
+import type { TrainingLesson } from './types';
+
+export const mockTrainingLessons: TrainingLesson[] = [
+  { id: 'L-001', traineeName: 'Ahmad Faiz', lessonDate: '2026-08-17', lessonTime: '08:00 - 09:00', instructorName: 'Mr. Tan', vehicle: 'Bus 12', lessonStatus: 'Scheduled', attendanceStatus: 'Pending' },
+  { id: 'L-002', traineeName: 'Siti Nur', lessonDate: '2026-08-17', lessonTime: '09:00 - 10:00', instructorName: 'Mr. Tan', vehicle: 'Bus 12', lessonStatus: 'Scheduled', attendanceStatus: 'Pending' },
+  { id: 'L-003', traineeName: 'Wei Ming', lessonDate: '2026-08-17', lessonTime: '10:00 - 11:00', instructorName: 'Ms. Lim', vehicle: 'Bus 07', lessonStatus: 'InProgress', attendanceStatus: 'Present' },
+  { id: 'L-004', traineeName: 'Ravi Kumar', lessonDate: '2026-08-17', lessonTime: '11:00 - 12:00', instructorName: 'Ms. Lim', vehicle: 'Bus 07', lessonStatus: 'Completed', attendanceStatus: 'Present' },
+  { id: 'L-005', traineeName: 'Nurul Huda', lessonDate: '2026-08-18', lessonTime: '08:00 - 09:00', instructorName: 'Mr. Goh', vehicle: 'Bus 03', lessonStatus: 'Completed', attendanceStatus: 'Late' },
+  { id: 'L-006', traineeName: 'Jason Lee', lessonDate: '2026-08-18', lessonTime: '09:00 - 10:00', instructorName: 'Mr. Goh', vehicle: 'Bus 03', lessonStatus: 'Cancelled', attendanceStatus: 'Absent' },
+  { id: 'L-007', traineeName: 'Ahmad Faiz', lessonDate: '2026-08-18', lessonTime: '10:00 - 11:00', instructorName: 'Mr. Tan', vehicle: 'Bus 12', lessonStatus: 'Scheduled', attendanceStatus: 'Pending' },
+  { id: 'L-008', traineeName: 'Priya Sharma', lessonDate: '2026-08-18', lessonTime: '13:00 - 14:00', instructorName: 'Ms. Lim', vehicle: 'Bus 07', lessonStatus: 'Scheduled', attendanceStatus: 'Pending' },
+  { id: 'L-009', traineeName: 'Daniel Ong', lessonDate: '2026-08-19', lessonTime: '08:00 - 09:00', instructorName: 'Mr. Goh', vehicle: 'Bus 03', lessonStatus: 'Scheduled', attendanceStatus: 'Pending' },
+  { id: 'L-010', traineeName: 'Farah Aziz', lessonDate: '2026-08-19', lessonTime: '09:00 - 10:00', instructorName: 'Mr. Tan', vehicle: 'Bus 12', lessonStatus: 'InProgress', attendanceStatus: 'Present' },
+  { id: 'L-011', traineeName: 'Wei Ming', lessonDate: '2026-08-19', lessonTime: '10:00 - 11:00', instructorName: 'Ms. Lim', vehicle: 'Bus 07', lessonStatus: 'Completed', attendanceStatus: 'Present' },
+  { id: 'L-012', traineeName: 'Ken Wong', lessonDate: '2026-08-19', lessonTime: '11:00 - 12:00', instructorName: 'Mr. Goh', vehicle: 'Bus 03', lessonStatus: 'Completed', attendanceStatus: 'Late' },
+  { id: 'L-013', traineeName: 'Siti Nur', lessonDate: '2026-08-20', lessonTime: '08:00 - 09:00', instructorName: 'Mr. Tan', vehicle: 'Bus 12', lessonStatus: 'Scheduled', attendanceStatus: 'Pending' },
+  { id: 'L-014', traineeName: 'Ravi Kumar', lessonDate: '2026-08-20', lessonTime: '09:00 - 10:00', instructorName: 'Ms. Lim', vehicle: 'Bus 07', lessonStatus: 'Cancelled', attendanceStatus: 'Absent' },
+  { id: 'L-015', traineeName: 'Nurul Huda', lessonDate: '2026-08-20', lessonTime: '10:00 - 11:00', instructorName: 'Mr. Goh', vehicle: 'Bus 03', lessonStatus: 'Scheduled', attendanceStatus: 'Pending' },
+  { id: 'L-016', traineeName: 'Jason Lee', lessonDate: '2026-08-20', lessonTime: '13:00 - 14:00', instructorName: 'Mr. Tan', vehicle: 'Bus 12', lessonStatus: 'Scheduled', attendanceStatus: 'Pending' },
+  { id: 'L-017', traineeName: 'Priya Sharma', lessonDate: '2026-08-21', lessonTime: '08:00 - 09:00', instructorName: 'Ms. Lim', vehicle: 'Bus 07', lessonStatus: 'InProgress', attendanceStatus: 'Present' },
+  { id: 'L-018', traineeName: 'Daniel Ong', lessonDate: '2026-08-21', lessonTime: '09:00 - 10:00', instructorName: 'Mr. Goh', vehicle: 'Bus 03', lessonStatus: 'Completed', attendanceStatus: 'Present' },
+  { id: 'L-019', traineeName: 'Farah Aziz', lessonDate: '2026-08-21', lessonTime: '10:00 - 11:00', instructorName: 'Mr. Tan', vehicle: 'Bus 12', lessonStatus: 'Completed', attendanceStatus: 'Late' },
+  { id: 'L-020', traineeName: 'Ken Wong', lessonDate: '2026-08-21', lessonTime: '11:00 - 12:00', instructorName: 'Ms. Lim', vehicle: 'Bus 07', lessonStatus: 'Cancelled', attendanceStatus: 'Absent' },
+  { id: 'L-021', traineeName: 'Ahmad Faiz', lessonDate: '2026-08-24', lessonTime: '08:00 - 09:00', instructorName: 'Mr. Goh', vehicle: 'Bus 03', lessonStatus: 'Scheduled', attendanceStatus: 'Pending' },
+  { id: 'L-022', traineeName: 'Wei Ming', lessonDate: '2026-08-24', lessonTime: '09:00 - 10:00', instructorName: 'Mr. Tan', vehicle: 'Bus 12', lessonStatus: 'Scheduled', attendanceStatus: 'Pending' },
+  { id: 'L-023', traineeName: 'Siti Nur', lessonDate: '2026-08-24', lessonTime: '10:00 - 11:00', instructorName: 'Ms. Lim', vehicle: 'Bus 07', lessonStatus: 'Scheduled', attendanceStatus: 'Pending' },
+  { id: 'L-024', traineeName: 'Nurul Huda', lessonDate: '2026-08-24', lessonTime: '11:00 - 12:00', instructorName: 'Mr. Goh', vehicle: 'Bus 03', lessonStatus: 'InProgress', attendanceStatus: 'Present' },
+];
